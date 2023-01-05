@@ -31,13 +31,16 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 
 package com.selenaguillen.easy.arrays;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TwoSum {
     public static void main(String[] args) {
         int[] array = {2, 7, 11, 15};
-        int[] answer = findTwoSum(array, 9);
+        int[] answer = findTwoSumHM(array, 9);
 
         int[] array2 = {3, 2, 4};
-        int[] answer2 = findTwoSum(array2, 6);
+        int[] answer2 = findTwoSumHM(array2, 6);
 
         for(int a: answer) {
             System.out.println(a);
@@ -66,5 +69,24 @@ public class TwoSum {
             }
         }
         return answer;
+    }
+
+    public static int[] findTwoSumHM(int[] nums, int target) {
+        Map<Integer, Integer> hm = new HashMap<>();
+        //hm will be value: index
+        int[] answer = new int[2];
+
+
+        for (int i = 0; i < nums.length; i++) {
+            if (hm.containsKey(target - nums[i])) {
+                answer[0] = hm.get(target - nums[i]); //gets the index of key in hm
+                answer[1] = i;
+                break;
+            }
+            hm.put(nums[i], i);
+        }
+
+        return answer;
+
     }
 }
