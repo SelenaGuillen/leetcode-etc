@@ -35,22 +35,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
-    public static void main(String[] args) {
-        int[] array = {2, 7, 11, 15};
-        int[] answer = findTwoSumHM(array, 9);
 
-        int[] array2 = {3, 2, 4};
-        int[] answer2 = findTwoSumHM(array2, 6);
-
-        for(int a: answer) {
-            System.out.println(a);
-        }
-
-        for (int a: answer2) {
-            System.out.println(a);
-        }
-
-    }
 
     //brute force
     public static int[] findTwoSum(int[] nums, int target) {
@@ -71,6 +56,8 @@ public class TwoSum {
         return answer;
     }
 
+
+    //one pass
     public static int[] findTwoSumHM(int[] nums, int target) {
         Map<Integer, Integer> hm = new HashMap<>();
         //hm will be value: index
