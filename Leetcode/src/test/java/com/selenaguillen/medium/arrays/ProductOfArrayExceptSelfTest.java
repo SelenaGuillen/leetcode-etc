@@ -19,4 +19,17 @@ class ProductOfArrayExceptSelfTest {
             assertEquals(test[i], actual[i]);
         }
     }
+
+    @Test
+    void productOfArrayExceptSelf2() {
+        int[] nums = {-1,1,0,-3,3};
+        int[] test = {0,0,9,0,0};
+
+        int[] actual = productOfArrayExceptSelf(nums);
+
+        assertEquals(test.length, actual.length);
+        for (int i = 0; i < nums.length; i++) {
+            assertEquals(test[i], actual[i]);
+        }
+    }
 }
