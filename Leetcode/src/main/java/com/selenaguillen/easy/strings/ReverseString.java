@@ -8,7 +8,6 @@ public class ReverseString {
         return sb.reverse().toString();
     }
 
-    //if they want to see logic ig
     public static String reverseString(String initialString) {
         String reversedString = "";
 

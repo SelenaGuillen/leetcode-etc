@@ -36,7 +36,6 @@ import java.util.Map;
 
 public class TwoSum {
 
-
     //brute force
     public static int[] findTwoSum(int[] nums, int target) {
         int[] answer = new int[2];
@@ -55,7 +54,6 @@ public class TwoSum {
         }
         return answer;
     }
-
 
     //one pass
     public static int[] findTwoSumHM(int[] nums, int target) {
